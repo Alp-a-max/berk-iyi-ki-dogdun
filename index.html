@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1838ef">
+  <meta name="description" content="Bir kutu dolusu iyi ki. Aç, keşfet, bir dilek tut. Bu küçük evren bugün sadece senin.">
+  <title>İyi ki doğdun, Berk!</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231838ef'/%3E%3Ctext x='9' y='49' font-size='57' fill='%23ff7539'%3E✳%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="ambient" aria-hidden="true"></div>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+  <header class="header">
+    <a class="wordmark" href="#" aria-label="Başa dön">iyi ki<span class="logo-star">✳</span></a>
+    <span class="header-note">BİR KUTU DOLUSU İYİ Kİ.</span>
+    <div class="header-actions">
+      <button class="name-button" id="personalize">Berk <span>＋</span></button>
+      <button class="sound-button" id="sound" aria-label="Sesi aç" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path class="sound-wave" d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/><path class="sound-slash" d="m16 9 5 6m0-6-5 6"/></svg></button>
+    </div>
+  </header>
+
+  <main id="experience" data-stage="0">
+    <div id="scene" role="img" aria-label="Döndürülebilen krom hediye kutusu ve havada süzülen renkli nesneler"></div>
+    <div class="orbit-label" aria-hidden="true">BU KUTUDA GÜZEL ŞEYLER VAR <span>✳</span></div>
+    <section class="copy" aria-live="polite">
+      <div class="eyebrow"><span class="tiny-star">✳</span><span id="eyebrow">BUGÜNÜN BAŞROLÜ BERK</span></div>
+      <h1 id="headline">Bugün<br><em>senin.</em></h1>
+      <p class="description" id="description">Berk, dünya biraz beklesin.<br>Senin için küçük bir evren hazırladık.</p>
+      <div class="cta-row"><button id="primary" class="primary-button"><span id="primary-label">Hediyeni aç</span><span class="button-star">✳</span></button><span class="cta-note" id="cta-note">MERAK ETMEK SERBEST.</span></div>
+    </section>
+    <div class="gift-tag" id="gift-tag"><span>ÖZEL TESLİMAT</span><strong id="tag-name">Berk için.</strong><svg viewBox="0 0 100 22" aria-hidden="true"><path d="M1 0v22m4-22v22m3-22v22m7-22v22m3-22v22m5-22v22m2-22v22m7-22v22m3-22v22m2-22v22m8-22v22m3-22v22m6-22v22m3-22v22m2-22v22m5-22v22m4-22v22m7-22v22m2-22v22m5-22v22m3-22v22m3-22v22" stroke="currentColor" stroke-width="2"/></svg></div>
+    <button class="danger-button" id="danger" hidden><span class="danger-cap"></span><span>SAKIN BASMA.</span></button>
+    <div class="scene-hint" id="scene-hint"><span class="hand-icon">↔</span> KUTUYU ÇEVİR, MERAKINA YENİL.</div>
+    <div class="floating-note" id="floating-note" aria-hidden="true">açınca<br><em>iyi gelir.</em><svg viewBox="0 0 100 65"><path d="M15 5Q90 0 70 50m-12-9 12 12 16-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+    <div class="wish-card" id="wish-card" hidden><span class="tiny-star">✳</span><p id="wish-message">Bazı iyi ki’lerin sebebi sensin.</p><button id="another-message">Bir tane daha</button></div>
+    <div class="final-stamp" id="final-stamp" hidden>İYİ Kİ<br>VARSIN<span>✳</span></div>
+  </main>
+
+  <footer class="footer">
+    <span class="footer-caption">SEN VARSIN DİYE DAHA GÜZEL.</span>
+    <nav class="stage-nav" aria-label="Deneyim bölümleri"><button class="stage-link active" data-go="0" aria-current="step"><span></span>Kutu</button><i></i><button class="stage-link" data-go="1"><span></span>Sürpriz</button><i></i><button class="stage-link" data-go="2"><span></span>Dilek</button></nav>
+    <span class="footer-right">BİRAZ SİHİR. BOLCA İYİ Kİ. <span>✳</span></span>
+  </footer>
+  <div class="toast" id="toast" role="status"></div>
+  <dialog id="name-dialog"><form id="name-form"><button type="button" class="dialog-close" aria-label="Kapat">×</button><span class="dialog-star">✳</span><h2>Başrolün adı ne?</h2><p>Bu küçük evreni biraz daha senin yapalım.</p><label for="recipient">İsim</label><input id="recipient" maxlength="24" autocomplete="given-name" placeholder="Buraya ismini yaz" required><button class="primary-button" type="submit">Tamam, bu benim evrenim <span>✳</span></button></form></dialog>
+  <noscript><p class="no-script">Bu sürprizin açılması için tarayıcında JavaScript’i etkinleştir.</p></noscript>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
